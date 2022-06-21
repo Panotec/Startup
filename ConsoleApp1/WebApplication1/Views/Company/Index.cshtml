@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WebApplication1.Models.Company>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<meta name="viewport" content="width=device-width" />*@
+    <title>상장 법인 목록</title>
+</head>
+<body>
+    <h1>상장 법인 목록</h1>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    @*<th>회사명</th>
+                    <th>업종</th>
+                    <th>주요제품</th>
+                    <th>상장일</th>
+                    <th>결산월</th>
+                    <th>대표자명</th>
+                    <th>지역</th>*@
+                    <td>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Sector)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(model => model.MainProducts)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(model => model.ListedDate)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(model => model.SettlementMonth)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Ceo)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(model => model.Region)
+                        </td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sector)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MainProducts)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ListedDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SettlementMonth)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ceo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Region)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
