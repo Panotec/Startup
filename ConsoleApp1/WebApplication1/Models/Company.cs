@@ -13,6 +13,6 @@ namespace WebApplication1.Models
         public DateTime ListedDate { get; set; }
         public int SettlementMonth { get; set; }
         public string Ceo { get; set; }
-        public string Region { get; set; }
+        public string Regions { get; set; }
     }
 }
